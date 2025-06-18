@@ -93,3 +93,17 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - sass를 설치 'npm install sass'
 - react-helmet-async를 설치 'npm install react-helmet-async'
 - swiper를 설치 'npm install swiper'
+
+
+#웹푠트
+웹 페이지에서 특정 폰트를 서버에서 다운로드하여 사용할 수 있게해주는 기술
+사용자 컴퓨터에 해당폰트가 없더라도 다운로드 받아서 사용할 수 있음
+웹 폰트 포맷은 웹페이지에서 사용되는 폰트를 브라우저가 이해하고 렌더링할 수 있는 형식으로 변환하는 포맷.
+웹 페이지에서 특정폰트를 사용하려면 해당폰트를 사용자의 브라우저로 전달해야하기 때문에 이러한 웹 폰트 포맷이 필요
+
+- WOFF : 웹페이지에서 사용하기 최적화된 웹 폰트 포맷
+압축률이 높아서 작은 파일 크기를 가지며, 빠른 로딩이 가능
+- WOFF2 : WOFF의 업그레이드 버전, 더욱 효율적인 압축기술을 사용
+- TTF/OTF 트루타입, 오픈타입 폰트의 확장자
+원래는 인쇄용 개발
+- EOT 웹페이지에서 사용하기 위해 개발된 폰트 포맷 중 하나
