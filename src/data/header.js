@@ -55,11 +55,10 @@ export const headerMenus = [
     },
 ];
 
-
 export const searchKeyword = [
     {
-        title:"websotryboy",
-        src:"/search/webstoryboy"
+        title: "webstoryboy",
+        src: "/search/webstoryboy"
     },
     {
         title: "HTML",
@@ -105,11 +104,11 @@ export const searchKeyword = [
 
 export const snsLink = [
     {
-        title:"github",
-        url:"https://github.com/webstoryboy",
-        icon:<AiFillGithub />
+        title: "github",
+        url: "https://github.com/webstoryboy",
+        icon: <AiFillGithub />
     },
-     {
+    {
         title: "youtube",
         url: "https://www.youtube.com/webstoryboy",
         icon: <AiFillYoutube />
