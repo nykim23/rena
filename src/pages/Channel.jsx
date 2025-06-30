@@ -3,7 +3,9 @@ import Main from '../components/section/Main'
 
 const Channel = () => {
     return (
-        <Main>Channel</Main>
+        <Main
+        title="유투브 채널"
+        description="유투브 채널페이지">Channel</Main>
     )
 }
 
