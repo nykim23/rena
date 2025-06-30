@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react'
 
 const Footer = () => {
     return (
-        <Footer id="footer" role="contentinfo">
+        <footer id='footer' role="contentinfo"> 
             footer
-        </Footer>
+        </footer>
     )
 }
 

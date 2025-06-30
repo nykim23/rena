@@ -24,16 +24,6 @@ export const headerMenus = [
         src: "/today"
     },
     {
-        title: "추천 개발자",
-        icon: <CiCoins1 />,
-        src: "/developer"
-    },
-    {
-        title: "웹디자인기능사",
-        icon: <CiBoxes />,
-        src: "/webd"
-    },
-    {
         title: "웹표준 사이트",
         icon: <CiBullhorn />,
         src: "/website"
@@ -56,10 +46,6 @@ export const headerMenus = [
 ];
 
 export const searchKeyword = [
-    {
-        title: "webstoryboy",
-        src: "/search/webstoryboy"
-    },
     {
         title: "HTML",
         src: "/search/html"
