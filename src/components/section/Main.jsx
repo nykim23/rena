@@ -15,12 +15,12 @@ const Main = (props) => {
                 {props.title && <title>{props.title}</title>}
                 <meta name="description" content={props.description} />
             </Helmet>
-            <Header />
+            {/* <Header /> */}
             <main id="main" role="main">
                 <Search />
                 {props.children}
             </main>
-            <Footer />
+            {/* <Footer /> */}
         </HelmetProvider>
     )
 }

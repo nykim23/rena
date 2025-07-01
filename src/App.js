@@ -23,8 +23,8 @@ const App = () => {
     return (
         <BrowserRouter>
             <Header />
-            <Suspense fallback={<Main />}>
-            // <Main>
+            <Suspense fallback={<div>Loading...</div>}>
+            
                 <Routes>
                     <Route path='/' element={<Home />} />
                     <Route path="/today" element={<Today />} />
@@ -39,7 +39,7 @@ const App = () => {
                     <Route path='/search/:searchId' element={<Search />} />
                     <Route path="*" element={<Not />} />
                 </Routes>
-            // </Main>
+            
             </Suspense>
             <Footer />
         </BrowserRouter>
