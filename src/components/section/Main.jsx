@@ -4,11 +4,13 @@ import { Helmet, HelmetProvider } from 'react-helmet-async'
 import Header from './Header'
 import Footer from './Footer'
 import Search from './Search'
+import ScrollTo from '../../util/scrollTo';
 
 
 const Main = (props) => {
     return (
         <HelmetProvider>
+            <ScrollTo />
             <Helmet titleTemplate="%s | Webs Youtube"
             defaultTitle="Webs Youtube"
             defer={false}>

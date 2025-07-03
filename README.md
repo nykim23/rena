@@ -305,6 +305,27 @@ Axios는 Javascript 및 Node.js에서 사용할 수 있는 라이브러리, HTTP
 nextPageToken 이 존재할때만 이 버튼을 렌더링
 
 
+
+- React 어플에서 라우팅 변경시 페이지가 맨 위로 스크롤되도록 하는 React 컴포넌트를 구현
+ React와 React Router 를 사용하여 작성되었고 
+ 페이지 경로가 변경될때마다 useEffect를 사용하여 스크롤위치를 맨위로 이동시킴
+
+ - import문 : 코드 상단에 React 의 useEffect 와 useLocation 훅을, 그리고 React Router의 useLocation 훅을 가져옴
+
+ - ScrollTo 컴포넌트 :  함수형 컴포넌트로 선언, 페이지 내의 다른곳에서 이컴포넌트를 사용
+
+ - useLocation 훅을 사용하여 현재 페이지의 경로롤 가져옴
+
+ - useEffect 훅 : 페이지의 컴포넌트가 렌더링 될때마다 실행된느 부수 효과 함수를 정의
+ pathname이 변경될때마다 실행
+
+ - window.scrollTo(0,0) : useEffect 함수 내에서 window.scrollTo 함수를 호출하여 페이지의 스크롤 위치를 (0,0)으로 이동
+
+ - [pathname] 의존성 배열 : useEffect 함수가 pathname 의 변경을 감지하고 그 때에만 실행되도록 하기위해 의존성 배열에 pathname 을 포함시킴
+
+ - return null; : 이 컴포넌트는 화면에 렝더링되는 것이 아니라 스크롤을 조작하는 용도로만 사용....렌더링되는 내용이 없으므로 null을 반환
+   
+
     
 
 
