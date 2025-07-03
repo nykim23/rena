@@ -261,7 +261,49 @@ JSX를 사용하면 Javascript 코드 내부에서 HTML과 유사항 구문으�
   API 응답을 JSON으로 파싱하고, 결과를 setVideos 함수를 사용하여 videos 상태변수에 저장함. API 호출 중에 발생할 수 잇는 오류도 처리함
 
   - JSX 에서는 Main 컴포넌트를 사용하여 페이지의 제목과 설명을 설정
-  
+
+
+
+  Rapid API 설정하기
+
+
+
+Axios는 Javascript 및 Node.js에서 사용할 수 있는 라이브러리, HTTP 요청을 간단하게 만들고 처리하는데 도움을 주는 주요 목적
+주로 클라이언트 측 및 서버 측 개발에서 사용됨
+
+- 간단한 HTTP 요청 : Axios는 HTTP GET, POST, PUT, DELETE 등의 다양한 요청 메서드를 간편하게 만들어주며, 다른 HTTP 클라이언트보다 사용하기 쉽다.
+
+- Promise 기반 : Axios는 Promise를 기반으로 동작하기 때문에 
+- 요청 및 응답 인터셉터 : Axios는 요청과 응답을 인터셉트하여 필요한 처리수행
+요청전에 인증 토큰을 추가하거나 응답을 처리하기 전에 데이터를 변환할수있다
+
+- 자동 데이터 변환 : Axios는 JSON 데이터를 자동으로 JS객체로 변환해주거나 반대로 JS를 JSON 문자열로 변환해주는 기능 
+
+- HTTP 요청의 취소 : Axios는 HTTP 요청을 중간에 취소할 수 있는 기능을 제공
+불필요한 네트워크 요청을 방지
+
+- 서버 및 브라우저 환경에서 사용 가능 : Axios는 브라우저와 Node.js 환경에서 모두 사용가능
+클라이언트측 서버측 동일한 코드 사용가능
+
+- 안전한 CSRF(Cross-Site Request Forgery) 보호 : Axios는 기본적으로 CSRF를 방어하기 위한 설정을 포함하고 있어, 보안적인 측면도
+
+
+
+
+
+- nextPageToken 상태 변수 : nextPageToken 다음 페이지의 토큰을 저장. 이를 사용하여 API 호출시 다음 페이지의 결과를 가져옴.초기값은 null
+
+
+- useEffect로 초기 검색 결과 초기화 : 검색어(searchId)가 변경될때마다 videos 상태와 nextPageToken 상태를 초기화
+
+
+- fetchVideos 함수 : 검색결과를 가져오는 로직을 함수로 추상화함
+
+- handleLoadMore 함수 : "더보기" 버튼 클릭시 호출되는 함수로, nextPageToken이 있을때만 추가 데이터를 로드함
+
+- JSX에서 "더보기" 버튼 추가 : 검색 결과 아래에 더보기버튼 추가하고 
+nextPageToken 이 존재할때만 이 버튼을 렌더링
+
 
     
 
