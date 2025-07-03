@@ -233,3 +233,37 @@ JSX를 사용하면 Javascript 코드 내부에서 HTML과 유사항 구문으�
 
 
 
+  - 이 컴포넌트의 목적은 검색 입력 필드를 제공하여 사용자가 입력하고 Enter키를 누르면 URL의 일부로 검색 키워드를 포함하는 새로운 URL로 이동하는 것. react-router-dom 라이브러리는 클라이언트 사이드 라우팅을 위해 사용되며, 페이지 전체 새로고침 없이 동적으로 URL을 변경할 수 있게해줌
+
+  - useState를 사용하여 searchKeyword라는 상태 변수를 생성하고 초기값을 빈 문자열로 설정함 이 변수는 사용자가 입력한 검색어를 저장함
+
+  - useNavigate 훅을 사용하여 navigate 함수를 가져옴
+  React Router의 내비게이션을 처리하는데 사용됨
+
+  - handleSearch 함수는 검색버튼을 클릭하거나 enter 키를 눌렀을때 호출
+
+
+  - JSX 에서는 검색 UI를 렌더링함
+  <input> 통해 검색어를 입력 onChange 이벤트 핸들러를 사용하여 입력된 검색어를 searchKeyword 상태로 업데이트함
+  Enter키를 눌렀을때 검색을 실행하도록 onKeyDown 이벤트 핸들러를 설정
+
+  - 검색 버튼을 클릭하거나 Enter 키를 누르면 handleSearch 함수가 호출되어 검색을 수행하고, 검색어는 초기화됨
+
+
+  이 컴포넌트는 검색결과를 표시하는 페이지로, Youtube API를 사용하여 검색결과를 가져와 표시
+
+  - useParams 훅을 사용하여 현재 경로에서 searchId 파라미터를 가져옴
+  - useState를 사용하여 videos 라는 상태 변수를 생성하고 초기값을 빈 배열로 설정
+  이 변수는 검색 결과로 받아온 비디오 목록을 저장함
+
+  - useEffect 훅을 사용하여 컴포넌트가 마운트되거나 searchId 가 변경될때마다 유튜브 API를 호출하여 검색결과를 가져옴
+  API호출에는 fetch 함수를 사용하며, 검색어와 API키를 쿼리 파라미터로 전달함
+  API 응답을 JSON으로 파싱하고, 결과를 setVideos 함수를 사용하여 videos 상태변수에 저장함. API 호출 중에 발생할 수 잇는 오류도 처리함
+
+  - JSX 에서는 Main 컴포넌트를 사용하여 페이지의 제목과 설명을 설정
+  
+
+    
+
+
+
